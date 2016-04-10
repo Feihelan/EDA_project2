@@ -26,20 +26,21 @@ PM2.5 Emissions Data (𝚜𝚞𝚖𝚖𝚊𝚛𝚢𝚂𝙲𝙲_𝙿𝙼𝟸𝟻.
 ## 12 09001 10100501  PM25-PRI     0.128 POINT 1999
 ## 16 09001 10200401  PM25-PRI     2.036 POINT 1999
 ## 20 09001 10200504  PM25-PRI     0.388 POINT 1999
-## 24 09001 10200602  PM25-PRI     1.490 POINT 1999
-𝚏𝚒𝚙𝚜: A five-digit number (represented as a string) indicating the U.S. county
-𝚂𝙲𝙲: The name of the source as indicated by a digit string (see source code classification table)
+## 24 09001 10200602  PM25-PRI     1.490 POINT 1999  
+
+𝚏𝚒𝚙𝚜: A five-digit number (represented as a string) indicating the U.S. county  
+𝚂𝙲𝙲: The name of the source as indicated by a digit string (see source code classification table)  
 𝙿𝚘𝚕𝚕𝚞𝚝𝚊𝚗𝚝: A string indicating the pollutant
 𝙴𝚖𝚒𝚜𝚜𝚒𝚘𝚗𝚜: Amount of PM2.5 emitted, in tons
 𝚝𝚢𝚙𝚎: The type of source (point, non-point, on-road, or non-road)
-𝚢𝚎𝚊𝚛: The year of emissions recorded
-Source Classification Code Table (𝚂𝚘𝚞𝚛𝚌𝚎_𝙲𝚕𝚊𝚜𝚜𝚒𝚏𝚒𝚌𝚊𝚝𝚒𝚘𝚗_𝙲𝚘𝚍𝚎.𝚛𝚍𝚜): This table provides a mapping from the SCC digit strings in the Emissions table to the actual name of the PM2.5 source. The sources are categorized in a few different ways from more general to more specific and you may choose to explore whatever categories you think are most useful. For example, source “10100101” is known as “Ext Comb /Electric Gen /Anthracite Coal /Pulverized Coal”.
+𝚢𝚎𝚊𝚛: The year of emissions recorded  
+Source Classification Code Table (𝚂𝚘𝚞𝚛𝚌𝚎_𝙲𝚕𝚊𝚜𝚜𝚒𝚏𝚒𝚌𝚊𝚝𝚒𝚘𝚗_𝙲𝚘𝚍𝚎.𝚛𝚍𝚜): This table provides a mapping from the SCC digit strings in the Emissions table to the actual name of the PM2.5 source. The sources are categorized in a few different ways from more general to more specific and you may choose to explore whatever categories you think are most useful. For example, source “10100101” is known as “Ext Comb /Electric Gen /Anthracite Coal /Pulverized Coal”.   
 
-You can read each of the two files using the 𝚛𝚎𝚊𝚍𝚁𝙳𝚂() function in R. For example, reading in each file can be done with the following code:
+You can read each of the two files using the 𝚛𝚎𝚊𝚍𝚁𝙳𝚂() function in R. For example, reading in each file can be done with the following code:  
 
 ## This first line will likely take a few seconds. Be patient!
-NEI <- readRDS("summarySCC_PM25.rds")
-SCC <- readRDS("Source_Classification_Code.rds")
+1.NEI <- readRDS("summarySCC_PM25.rds")
+2.SCC <- readRDS("Source_Classification_Code.rds")
 as long as each of those files is in your current working directory (check by calling 𝚍𝚒𝚛() and see if those files are in the listing).
 Assignmentless 
 The overall goal of this assignment is to explore the National Emissions Inventory database and see what it say about fine particulate matter pollution in the United states over the 10-year period 1999–2008. You may use any R package you want to support your analysis.
@@ -55,9 +56,9 @@ Across the United States, how have emissions from coal combustion-related source
 How have emissions from motor vehicle sources changed from 1999–2008 in Baltimore City?
 Compare emissions from motor vehicle sources in Baltimore City with emissions from motor vehicle sources in Los Angeles County, California (𝚏𝚒𝚙𝚜 == "𝟶𝟼𝟶𝟹𝟽"). Which city has seen greater changes over time in motor vehicle emissions?
 Making and Submitting Plotsless 
-For each plot you should
+For each plot you should   
 
-Construct the plot and save it to a PNG file.
-Create a separate R code file (𝚙𝚕𝚘𝚝𝟷.𝚁, 𝚙𝚕𝚘𝚝𝟸.𝚁, etc.) that constructs the corresponding plot, i.e. code in plot1.R constructs the plot1.png plot. Your code file should include code for reading the data so that the plot can be fully reproduced. You must also include the code that creates the PNG file. Only include the code for a single plot (i.e. 𝚙𝚕𝚘𝚝𝟷.𝚁 should only include code for producing 𝚙𝚕𝚘𝚝𝟷.𝚙𝚗𝚐)
-Upload the PNG file on the Assignment submission page
-Copy and paste the R code from the corresponding R file into the text box at the appropriate point in the peer assessment.
+Construct the plot and save it to a PNG file.  
+Create a separate R code file (𝚙𝚕𝚘𝚝𝟷.𝚁, 𝚙𝚕𝚘𝚝𝟸.𝚁, etc.) that constructs the corresponding plot, i.e. code in plot1.R   constructs the plot1.png plot. Your code file should include code for reading the data so that the plot can be fully reproduced. You must also include the code that creates the PNG file. Only include the code for a single plot (i.e. 𝚙𝚕𝚘𝚝𝟷.𝚁 should only include code for producing 𝚙𝚕𝚘𝚝𝟷.𝚙𝚗�  �)
+Upload the PNG file on the Assignment submission page  
+Copy and paste the R code from the corresponding R file into the text box at the appropriate point in the peer assessment.  
